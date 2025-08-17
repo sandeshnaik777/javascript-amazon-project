@@ -9,6 +9,8 @@ hello();
 
 
 
+function renderOrderSummary()
+{
 
 let cartSummaryHtml='';
 cart.forEach((cartItem)=>
@@ -142,6 +144,11 @@ document.querySelectorAll('.js-delivery-option')
   {
     const {productId,deliveryOptionId} = element.dataset;
 updateDeliveryOption(productId,deliveryOptionId)
+renderOrderSummary();
+
+
   }
 )
 });
+}
+renderOrderSummary();
