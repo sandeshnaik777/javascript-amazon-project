@@ -1,6 +1,14 @@
 import {cart,addToCart} from '../data/cart.js';
-import {products} from '../data/products.js';
+import {products,loadProduct} from '../data/products.js';
 import { formatCurreny } from './utils/money.js';
+
+
+loadProduct(renderProductsGrid);
+
+function renderProductsGrid()
+{
+
+
 let productsHtml='';
 products.forEach((product)=>{
 
@@ -80,3 +88,4 @@ document.querySelectorAll('.js-add-to-cart')
       
     });
 })
+}
